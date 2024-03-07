@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+  }
+  
+  .tortoise-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .tortoise-gif {
+    position: absolute;
+    width: 10%;
+    bottom: 50%;
+    left: -100px; /* Move the GIF off-screen initially */
+    animation: tortoise-move 15s linear infinite;
+  }
+  
+  @keyframes tortoise-move {
+    0% {
+      transform: translateX(-200px); /* Move the GIF off-screen */
+    }
+    100% {
+      transform: translateX(calc(100% + 1600px)); /* Move the GIF completely off-screen on the right side */
+    }
+  }
+  
